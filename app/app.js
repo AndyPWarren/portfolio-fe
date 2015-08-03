@@ -4,7 +4,7 @@
  * @main     aucuparia
  * @author   SpectraKey
  */
-angular.module("angular-seed", [
+angular.module("portfolio", [
     "config",
 ])
 /**

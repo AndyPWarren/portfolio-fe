@@ -1,8 +1,8 @@
 {
-  "name": "angular-seed",
-  "description": "AngularJS seed project ready for lift off",
+  "name": "portfolio",
+  "description": "APW portfolio frontend",
   "version": "0.0.0",
-  "homepage": "",
+  "homepage": "á",
   "license": "MIT",
   "private": true,
   "dependencies": {

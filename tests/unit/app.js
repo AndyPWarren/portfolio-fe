@@ -1,11 +1,11 @@
 "use strict";
 
-describe("angular-seed", function (){
+describe("portfolio", function (){
 
     var $location, $rootScope;
 
     beforeEach(function(){
-        module("angular-seed");
+        module("portfolio");
     });
 
     beforeEach(inject(function ( _$location_, _$rootScope_) {

@@ -1,11 +1,11 @@
 {
-  "name": "angular-seed",
+  "name": "portfolio",
   "private": true,
   "version": "0.0.0",
-  "description": "AngularJS seed project ready for lift off",
+  "description": "APW portfolio site",
   "repository": "",
   "license": "Proprietary",
-  "author": "SpectraKey <dev@spectrakey.co.uk>",
+  "author": "Andrew Warren <mail@andrewpwarren.co.uk>",
   "main": "app/app.js",
   "dependencies": {
     "bower": "~1.4.1",
