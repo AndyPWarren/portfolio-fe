@@ -1,0 +1,55 @@
+#
+# FirstMate-Prototype Shippable Build Config
+# Configuration for Frontend build environment
+#
+
+# Language setting
+language: node_js
+
+# Node version
+node_js:
+ - 0.12
+
+# Specify the build_image
+build_image: shipimg/ubuntu1404_nodejs
+
+# Setup docker and node.js environment
+before_install:
+ - source ~/.nvm/nvm.sh && nvm install $SHIPPABLE_NODE_VERSION
+ - node --version
+
+# Install the required dependencies
+install:
+ - npm install -g bower
+ - npm install -g grunt-cli
+ - npm install -g protractor && webdriver-manager update
+ - npm install
+
+env:
+  global:
+  - ORG=spectrakey PROJECT=firstmate-prototype
+  - CI_REPORTS=shippable/testresults COVERAGE_REPORTS=shippable/codecoverage
+  secure:
+  - W1tNyJngcex4y/BqV4WeeOyr3Bsvg3cQrkiQydbNVS19laJRWqHGblny5hw+1sA44DM4+q0vEdhhuCBSnUGcVoaOCkspAWvq4+qVZSZThbvz7J8ZP9p19bDENwV7Jl57jdy8/hrQ00cTikjuNj/fbBwRJFyEWjVCGFeUIxIVsjHwn9Is8uNhjYD+FqczpE9PYGcNzyr7VxJD85P8TzXOrBdpB486LIcX1mYvd4VJ40Ju4m6pv9CXlvJTV0HTWOKNHGrngCcrgyuoFWaosZT6ht2D5FhCoA4JGr8D75b0g3gM8FhShwkocGmIeRgJT+JpYHdtRokIThPxKTq0hur/pw==
+
+# Setup report folders
+before_script:
+ - mkdir -p $CI_REPORTS
+ - mkdir -p $COVERAGE_REPORTS
+
+# Running npm test to run your test cases
+script:
+ - grunt test:development
+ - grunt test
+ - grunt e2e --ci
+
+# Test coverage reports
+after_script:
+ - cp -R ./coverage/* $COVERAGE_REPORTS
+
+archive: true
+
+# Deploy to S3
+after_success:
+  - >
+    [[ $BRANCH = 'develop' ]] grunt deploy --env=production
