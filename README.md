@@ -4,6 +4,8 @@ This project structure is based on the [angular-seed](https://github.com/angular
 
 The project is preconfigured to install the Angular framework and a bunch of development and testing tools for instant web development gratification.
 
+To rename the project use `replace in` in Brackets
+
 
 ## Getting Started
 
