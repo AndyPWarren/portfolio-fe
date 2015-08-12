@@ -6,7 +6,8 @@
  */
 angular.module("portfolio", [
     "config",
-    "portfolio.api"
+    "portfolio.api",
+    "portfolio.about"
 ])
 /**
  * @method config

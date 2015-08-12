@@ -4,6 +4,10 @@
         "./app/bower_components/angular-resource/angular-resource.js"
     ],
     "application": [
-        "./app/app.js"
+        "./app/app.js",
+        "./app/components/api/APIResource.js",
+        "./app/components/about/about.js"
+
+
     ]
 }
