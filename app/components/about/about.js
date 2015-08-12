@@ -3,9 +3,7 @@
 * @module   portfolio.about
 * @author   Andrew Warren
 */
-angular.module("portfolio.about", [
-
-])
+angular.module("portfolio.about", [])
 
 /**
 * @constructor
@@ -14,13 +12,15 @@ angular.module("portfolio.about", [
 */
 .controller("aboutCtrl", [
     "$scope",
+    "$rootScope",
     "$log",
     "APIResource",
-    function ($scope, $log, APIResource) {
+    function ($scope, $rootScope, $log, APIResource) {
 
         $scope.getAboutSuccess = function getAboutSuccess(res){
             console.log(res);
             $scope.background = res.results[0].background;
+            $rootScope.position = res.results[0].position;
 
         };
 
@@ -28,7 +28,7 @@ angular.module("portfolio.about", [
             $log.error(err);
         };
 
-        APIResource.getAbout($scope.getAboutSuccess, $scope.getAboutError)
+        APIResource.getAbout($scope.getAboutSuccess, $scope.getAboutError);
 
     }
 ])
