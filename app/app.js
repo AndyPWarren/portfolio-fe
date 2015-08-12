@@ -6,6 +6,7 @@
  */
 angular.module("portfolio", [
     "config",
+    "APIResource"
 ])
 /**
  * @method config
