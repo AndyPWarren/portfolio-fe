@@ -6,7 +6,8 @@
     "application": [
         "./app/app.js",
         "./app/components/api/APIResource.js",
-        "./app/components/about/about.js"
+        "./app/components/about/about.js",
+        "./app/components/projects/projects.js"
 
 
     ]
