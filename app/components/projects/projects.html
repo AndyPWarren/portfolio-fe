@@ -1,12 +1,24 @@
-<div class="projects" ng-repeat="project in projects">
-    <h1>{{project.title | uppercase}}</h1>
-    <p ng-bind="project.description"></p>
-    <img ng-if="project.image" src="{{project.image}}">
-    <ul>
-        <li ng-repeat="skill in project.skills">{{skill.name}}</li>
-    </ul>
-    <ul>
-        <li ng-repeat="tool in project.tools">{{tool.tool}}</li>
-    </ul>
+<carousel template-url="./components/projects/projectsCarousel.html">
+    <slide class="slide text-light-blue" ng-repeat="project in projects" active="project.active">
+        <div class="col-sm-12">
+            <h1 class=" pull-left">{{project.title | uppercase}}</h1>
+        </div>
+        <div>
+            <p ng-class="project.image ? 'col-sm-6' : 'col-sm-12'" ng-bind="project.description"></p>
+            <img class="col-sm-6" ng-if="project.image" src="{{project.image}}">
+        </div>
+        <div class="row">
+            <ul class="list-inline pull-left">
+                <li ng-repeat="skill in project.skills">{{skill.name}}</li>
+            </ul>
+        </div>
+        <div class="row">
+            <ul class="list-inline pull-left">
+                <li ng-repeat="tool in project.tools"><span class="label" ng-bind="tool.tool"></span></li>
+            </ul>
+        </div>
 
-</div>
+        <div class="carousel-caption">{{$index+1}} of {{projects.length}}</div>
+    </slide>
+</carousel>
+
