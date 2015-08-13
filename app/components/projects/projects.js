@@ -18,7 +18,6 @@ angular.module("portfolio.projects", [])
     function ($scope, $log, APIResource) {
 
         $scope.getProjectSuccess = function getProjectSuccess(res){
-            console.log(res);
             $scope.projects = res.results;
         };
 
