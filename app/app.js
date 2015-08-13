@@ -6,6 +6,7 @@
  */
 angular.module("portfolio", [
     "config",
+    "ui.bootstrap",
     "portfolio.api",
     "portfolio.about",
     "portfolio.projects"
