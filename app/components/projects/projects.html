@@ -1,0 +1,12 @@
+<div class="projects" ng-repeat="project in projects">
+    <h1>{{project.title | uppercase}}</h1>
+    <p ng-bind="project.description"></p>
+    <img ng-if="project.image" src="{{project.image}}">
+    <ul>
+        <li ng-repeat="skill in project.skills">{{skill.name}}</li>
+    </ul>
+    <ul>
+        <li ng-repeat="tool in project.tools">{{tool.tool}}</li>
+    </ul>
+
+</div>
