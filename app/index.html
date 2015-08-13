@@ -48,8 +48,8 @@
     <![endif]-->
 
     <div ng-include src="'components/hero/hero.html'"></div>
-    <div ng-include src="'components/about/about.html'"></div>
-    <div ng-include src="'components/projects/projects.html'"></div>
+    <section class="row" ng-include src="'components/about/about.html'" ng-controller="aboutCtrl"></section>
+    <section class="row" ng-include src="'components/projects/projects.html'" ng-controller="projectsCtrl"></section>
 
     <noscript>
         <p>JavaScript is either disabled or not supported by your browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or enable JavaScript to improve your experience.</p>

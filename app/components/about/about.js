@@ -18,7 +18,6 @@ angular.module("portfolio.about", [])
     function ($scope, $rootScope, $log, APIResource) {
 
         $scope.getAboutSuccess = function getAboutSuccess(res){
-            console.log(res);
             $scope.background = res.results[0].background;
             $rootScope.position = res.results[0].position;
 
