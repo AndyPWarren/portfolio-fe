@@ -1,0 +1,39 @@
+.experience {
+    background-color: @light-blue;
+    .left-side {
+        padding-right: 2em;
+        padding-top: 3em;
+    }
+    li:before {
+        content: "- ";
+        left: 2em;
+        position: absolute;
+    }
+    .left-side:after {
+        border-bottom-color: @orange;
+        border-bottom-style: solid;
+        border-bottom-width: 4px;
+        content: "";
+        position: absolute;
+        right: -1em;
+        top: 4.4em;
+        width: 2em;
+    }
+    .right-side {
+        border-left-color: @orange;
+        border-left-style: solid;
+        border-left-width: 4px;
+        padding-left: 2em;
+        padding-top: 3.75em;
+    }
+    h2 {
+        margin-top: 0px;
+        text-align: left
+    }
+    .h5 {
+        margin-top: 0px;
+    }
+    .last {
+        margin-bottom: 3em;
+    }
+}

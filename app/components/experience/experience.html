@@ -1,0 +1,11 @@
+<div class="row text-white" ng-repeat="experience in experiences">
+    <div class="col-sm-3 left-side">
+        <h2 class="pull-right" ng-bind="experience.title"></h2>
+        <span class="pull-right h5">{{experience.dateStart | date:'yyyy'}} - <span ng-hide="experience.current">{{experience.dateEnd | date:'yyyy'}}</span><span ng-show="experience.current">present</span></span>
+    </div>
+    <div class="col-sm-9 right-side ">
+        <p class="text-bold" ng-bind="experience.lead"></p>
+        <p ng-class="($index+1) === experiences.length ? 'last' : ''" ng-bind-html="experience.text"></p>
+    </div>
+</div>
+

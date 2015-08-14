@@ -21,6 +21,7 @@ angular.module("portfolio.experience", [
 
         $scope.getExperienceSuccess = function getExperienceSuccess(res){
             console.log(res);
+            $scope.experiences = res.results;
         };
 
         $scope.getExperienceError = function getExperienceError(err){
