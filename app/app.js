@@ -13,7 +13,8 @@ angular.module("portfolio", [
     "portfolio.about",
     "portfolio.projects",
     "portfolio.experience",
-    "portfolio.contact"
+    "portfolio.contact",
+    "portfolio.footer"
 ])
 /**
  * @method config
