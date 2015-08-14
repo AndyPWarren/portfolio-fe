@@ -11,8 +11,7 @@
         "./app/components/api/APIResource.js",
         "./app/components/about/about.js",
         "./app/components/projects/projects.js",
-        "./app/components/experience/experience.js"
-
-
+        "./app/components/experience/experience.js",
+        "./app/components/contact/contact.js"
     ]
 }

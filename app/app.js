@@ -11,9 +11,8 @@ angular.module("portfolio", [
     "portfolio.api",
     "portfolio.about",
     "portfolio.projects",
-    "portfolio.experience"
-
-
+    "portfolio.experience",
+    "portfolio.contact"
 ])
 /**
  * @method config
