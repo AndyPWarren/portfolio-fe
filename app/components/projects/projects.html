@@ -7,11 +7,13 @@
             <p ng-class="project.image ? 'col-sm-6' : 'col-sm-12'" ng-bind="project.description"></p>
             <img class="col-sm-6" ng-if="project.image" src="{{project.image}}">
         </div>
+        <h3 class="row">SKILLS</h3>
         <div class="row">
             <ul class="list-inline pull-left">
                 <li ng-repeat="skill in project.skills">{{skill.name}}</li>
             </ul>
         </div>
+        <h3 class="row">TOOLS</h3>
         <div class="row">
             <ul class="list-inline pull-left">
                 <li ng-repeat="tool in project.tools"><span class="label" ng-bind="tool.tool"></span></li>
