@@ -15,7 +15,19 @@ angular.module("portfolio.experience", [
 */
 .controller("experienceCtrl", [
     "$scope",
-    function ($scope) {
+    "$log",
+    "APIResource",
+    function ($scope, $log, APIResource) {
+
+        $scope.getExperienceSuccess = function getExperienceSuccess(res){
+            console.log(res);
+        };
+
+        $scope.getExperienceError = function getExperienceError(err){
+            $log.error(err)
+        };
+
+        APIResource.getExperiences($scope.getExperienceSuccess, $scope.getExperienceError);
 
     }
 ])

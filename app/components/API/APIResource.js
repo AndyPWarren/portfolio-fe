@@ -17,6 +17,10 @@ angular.module("portfolio.api", [
                 getProjects:{
                     method: "GET",
                     url: env.API_ADDRESS + "projects"
+                },
+                getExperiences:{
+                    method: "GET",
+                    url: env.API_ADDRESS + "experience"
                 }
             }
         );
