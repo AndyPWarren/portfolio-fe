@@ -9,7 +9,9 @@ angular.module("portfolio", [
     "ui.bootstrap",
     "portfolio.api",
     "portfolio.about",
-    "portfolio.projects"
+    "portfolio.projects",
+    "portfolio.experience"
+
 
 ])
 /**

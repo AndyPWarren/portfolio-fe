@@ -9,7 +9,8 @@
         "./app/app.js",
         "./app/components/api/APIResource.js",
         "./app/components/about/about.js",
-        "./app/components/projects/projects.js"
+        "./app/components/projects/projects.js",
+        "./app/components/experience/experience.js"
 
 
     ]
