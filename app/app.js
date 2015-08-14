@@ -7,6 +7,7 @@
 angular.module("portfolio", [
     "config",
     "ui.bootstrap",
+    "ngSanitize",
     "portfolio.api",
     "portfolio.about",
     "portfolio.projects",
