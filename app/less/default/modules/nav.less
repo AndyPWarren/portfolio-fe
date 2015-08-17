@@ -1,0 +1,46 @@
+.navbar-default {
+    background-color:@pale-blue-o;
+    //background-color:@light-blue;
+    //background-color:@orange;
+    border: none;
+    p {
+        margin: 0px;
+        font-size: 14px;
+        color: @dark-blue;
+    }
+    li {
+        a {
+            &:hover {
+                p {
+                    color: @orange;
+                }
+            }
+        }
+    }
+    .active {
+        p {
+            color: @orange!important;
+        }
+
+    }
+
+
+}
+
+.disabled {
+    display: none!important;
+}
+
+
+.separator {
+    width: 6px;
+    height: 6px;
+    background-color: @orange;
+    margin-top: 23px;
+}
+
+
+.no-transluncent-nav {
+    background-color: @pale-blue;
+    .border-bottom(@orange)
+}

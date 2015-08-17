@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="fragment" content="!">
-    <title>| Andrew Warren</title>
+    <title>Andrew Warren</title>
 
     <!-- build:template
     <base href="<%= url %>">
@@ -47,7 +47,8 @@
         <p>Your browser is <strong>ancient</strong> and will not work with this site. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div ng-include src="'components/hero/hero.html'"></div>
+    <div ng-include src="'components/nav/nav.html'"></div>
+    <div id="home" ng-include src="'components/hero/hero.html'"></div>
     <section id="about" class="row" ng-include src="'components/about/about.html'" ng-controller="aboutCtrl"></section>
     <section id="projects" class="row" ng-include src="'components/projects/projects.html'" ng-controller="projectsCtrl"></section>
     <section id="experience" class="row" ng-include src="'components/experience/experience.html'" ng-controller="experienceCtrl"></section>
@@ -70,6 +71,7 @@
     <script src="./bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="./bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="./bower_components/angular-messages/angular-messages.js"></script>
+    <script src="./bower_components/angular-scroll/angular-scroll.js"></script>
     <script src="./app.js"></script>
     <script src="./components/api/APIResource.js"></script>
     <script src="./components/about/about.js"></script>
