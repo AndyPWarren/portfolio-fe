@@ -10,6 +10,7 @@ angular.module("portfolio", [
     "ngSanitize",
     "ngMessages",
     "duScroll",
+    "ngAnimate",
     "portfolio.api",
     "portfolio.about",
     "portfolio.projects",
