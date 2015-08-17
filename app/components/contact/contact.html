@@ -1,0 +1,79 @@
+<!--
+<div class="row">
+    <div class="col-md-12" style="text-align:center">
+        <h3>Contact</h3>
+        <h5>Maecenas id porta nisl. Mauris a purus lectus</h5>
+    </div>
+</div>
+-->
+
+<div class="col-md-8 col-md-offset-2 form-group">
+    <div class="row">
+        <!-- CONTACT FORM -->
+        <form name="contactForm" class="form-group" novalidate>
+            <div class="col-md-6">
+                <!-- NAME -->
+                <div class="row input-holder">
+                    <input id="name" name="name" type="text" class="form-control" placeholder="name" ng-model="form.name" ng-pattern="string" ng-required="true">
+                    <div ng-messages="contactForm.name.$dirty && contactForm.name.$error">
+                        <div class="alert alert-danger" ng-message="required">Your name is required</div>
+                        <div class="alert alert-danger" ng-message="invalid">Your name doesn't have numbers in it!!</div>
+                    </div>
+                </div>
+
+                <!-- EMAIL -->
+                <div class="row input-holder">
+                    <input id="email" name="email" type="email" class="form-control" placeholder="email" ng-model="form.email" ng-required="true">
+                    <div ng-messages="contactForm.email.$dirty && contactForm.email.$error">
+                        <div class="alert alert-danger" ng-message="required">Your email is required</div>
+                        <div class="alert alert-danger" ng-message="email">This is not a valid email address</div>
+                    </div>
+                </div>
+
+                <!-- SUBJECT -->
+                <div class="row input-holder">
+                    <input id="subject" name="subject" type="text" class="form-control" placeholder="subject" ng-model="form.subject">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <!-- MESSAGE -->
+                <textarea name="message" class="form-control" placeholder="message" ng-model="form.message" ng-required="true"></textarea>
+                <div ng-messages="contactForm.message.$dirty && contactForm.message.$error">
+                    <div class="alert alert-danger" ng-message="required">message required</div>
+                </div>
+            </div>
+            <div class="col-md-10 col-md-offset-5">
+                <button class="col-md-2 btn btn-default" type="submit" ng-disabled="contactForm.$invalid" ng-click="sendMessage()">SEND</button>
+            </div>
+            <!-- SUBMIT -->
+        </form>
+    </div>
+    <div class="row info">
+        <div class="col-md-6">
+            <a href="mailto:mail@andrewpwarren.co.uk">
+                <div class="col-md-2 no-padding">
+                    <img class="icons" src="./img/icons/mail.svg">
+                </div>
+                <div class="col-md-10 no-padding">
+                    <p>mail@andrewpwarren.co.uk</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a href="tel:+447856181759">
+                <div class="col-md-2 icon-right no-padding">
+                    <img class="icons pull-right" src="./img/icons/phone.svg">
+                </div>
+                <div class="col-md-10 no-padding">
+                    <p class="pull-right">+44 (0) 7856 181759</p>
+                </div>
+
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
