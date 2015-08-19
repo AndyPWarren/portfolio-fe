@@ -5,6 +5,10 @@
     </div>
     <div class="col-sm-9 right-side ">
         <p class="text-bold" ng-bind="experience.lead"></p>
+        <div class="award" ng-if="experience.award">
+            <img class="award-icon" src="./img/icons/star.svg">
+            <span ng-bind="experience.awardName"></span>
+        </div>
         <p ng-class="($index+1) === experiences.length ? 'last' : ''" ng-bind-html="experience.text"></p>
     </div>
 </div>
