@@ -32,16 +32,6 @@
     float:right
 }
 
-.btn-default, .btn-default[disabled] {
-    background-color: @light-blue;
-    color: @white;
-    border: none;
-    &:hover {
-        background-color:@orange;
-        color: @white;
-    }
-}
-
 .center {
     left:40%
 }
@@ -75,39 +65,4 @@ textarea.form-control {
 
 
 
-.placeholder(@color) {
-    ::-webkit-input-placeholder {color: @color};
-    :-moz-placeholder {color: @color};
-    ::-moz-placeholder {color: @color};
-    :-ms-input-placeholder {color: @color};
-}
 
-.border-left(@color; @width: 2px) {
-    border-left-color: @color;
-    border-left-style: solid;
-    border-left-width: @width;
-}
-
-.border-right(@color; @width: 2px) {
-    border-right-color: @color;
-    border-right-style: solid;
-    border-right-width: @width;
-}
-
-.border-top(@color; @width: 2px) {
-    border-top-color: @color;
-    border-top-style: solid;
-    border-top-width: @width;
-}
-
-.border-bottom(@color; @width: 2px) {
-    border-bottom-color: @color;
-    border-bottom-style: solid;
-    border-bottom-width: @width;
-}
-
-.border-all(@color; @width: 2px) {
-    border-color: @color;
-    border-style: solid;
-    border-width: @width;
-}

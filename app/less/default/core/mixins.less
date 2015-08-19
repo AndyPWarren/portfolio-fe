@@ -34,3 +34,32 @@
     border-style: solid;
     border-width: @width;
 }
+
+.transition-color(@time) {
+    -webkit-transition: background-color @time, color @time;
+       -moz-transition: background-color @time, color @time;
+         -o-transition: background-color @time, color @time;
+            transition: background-color @time, color @time;
+}
+
+.transition-opacity(@time) {
+    -webkit-transition: opacity @time;
+       -moz-transition: opacity @time;
+         -o-transition: opacity @time;
+            transition: opacity @time;
+}
+
+.transition-bgcolor(@time) {
+    -webkit-transition: background-color @time;
+       -moz-transition: background-color @time;
+         -o-transition: background-color @time;
+            transition: background-color @time;
+}
+
+.transform-x(@amount) {
+    -webkit-transform: translateX(@amount);
+       -moz-transform: translateX(@amount);
+        -ms-transform: translateX(@amount);
+         -o-transform: translateX(@amount);
+            transform: translateX(@amount);
+}

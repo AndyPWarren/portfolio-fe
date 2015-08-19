@@ -1,0 +1,109 @@
+button, .btn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px 10px 20px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: @light-blue 2px solid;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    border-radius: 0px;
+    font-size:16px;
+    color: @light-blue;
+    .transition-color(0.3s)
+}
+
+button[disabled] {
+    &:hover {
+        background-color: Transparent;
+        color: @light-blue;
+    }
+}
+
+.btn:hover {
+    background-color: @light-blue;
+    color: @white;
+}
+
+.btn:focus {
+    outline: none;
+    color @light-blue
+}
+
+.progress-button {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.progress-button svg#check path,
+.progress-button svg#cross path {
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-width: 4;
+    .transition-opacity(0.1s)
+}
+
+.submitting.progress-button span {
+    .transition-opacity(0.15s)
+}
+
+.submitting.progress-button span,
+.success.progress-button span,
+.error.progress-button span {
+    opacity: 0; /* keep it hidden in all states */
+}
+
+/* Transition for when returning to default state */
+.progress-button button span {
+    .transition-opacity(0.3s)
+}
+
+.success.progress-button button,
+.error.progress-button button {
+    .transition-bgcolor(0.3s)
+}
+
+.success.progress-button button,
+.error.progress-button button,
+.submitting.progress-button button {
+    background-color: @light-blue;
+}
+
+.progress-line {
+    position: absolute;
+    left: 39px;
+    bottom: -2px
+}
+
+.animate-left-right {
+    animation-name: left;
+    animation-duration: 1s;
+    animation-iteration-count: 1000;
+    animation-timing-function: linear;
+}
+
+svg.progress-line path {
+    stroke: @orange;
+    stroke-width: 4;
+}
+
+.progress-animate {
+    transition: left
+}
+
+.progress-btn-hover {
+    background-color: @light-blue;
+    color: @white;
+}
+
+.status {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    pointer-events: none;
+    .transform-x(-50%)
+}
+
+
