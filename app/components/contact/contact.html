@@ -1,4 +1,4 @@
-<div class="col-md-8 col-md-offset-2 form-group">
+<div class="col-md-8 col-md-offset-2 form-group" ng-controller="contactCtrl">
     <div class="row">
         <!-- CONTACT FORM -->
         <form name="contactForm" class="form-group" novalidate>
@@ -34,10 +34,9 @@
                     <div class="alert alert-danger" ng-message="required">message required</div>
                 </div>
             </div>
-            <div class="col-md-10 col-md-offset-5">
-                <button class="col-md-2 btn btn-default" type="submit" ng-disabled="contactForm.$invalid" ng-click="sendMessage()">SEND</button>
-            </div>
             <!-- SUBMIT -->
+            <div class="col-md-10 col-md-offset-5" ng-include="'./components/contact/sendButton.html'"></div>
+
         </form>
     </div>
     <div class="row info">
@@ -63,6 +62,8 @@
         </div>
     </div>
 </div>
+
+
 
 
 

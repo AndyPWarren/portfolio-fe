@@ -21,6 +21,10 @@ angular.module("portfolio.api", [
                 getExperiences:{
                     method: "GET",
                     url: env.API_ADDRESS + "experience"
+                },
+                sendMessage:{
+                    method: "POST",
+                    url: env.API_ADDRESS + "contact"
                 }
             }
         );

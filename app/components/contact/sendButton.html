@@ -1,0 +1,23 @@
+<div id="progress-button" class="progress-button" ng-class="{'submitting' : submitting, 'success' : success, 'error' : success === false}">
+    <button ng-click="submit()" class="btn progress-btn" ng-disabled="contactForm.$invalid" ><span>Submit</span></button>
+
+    <svg class="progress-line" width="40" height="5" ng-show="submitting" ng-class="submitting ? 'animate-left-right' : ''">
+        <path d="m0.75,0.75l0,0zl172.73668,0"/>
+    </svg>
+
+    <!-- checkmark to show on success -->
+    <svg id="check" class="status" width="70" height="70" ng-show="success">
+        <path d="m31.5,25l15.3,-23.2"/>
+        <path d="m31.5,25l-8.5,-7.1"/>
+    </svg>
+
+    <!-- cross to show on error -->
+    <svg id="cross" class="status" width="70" height="70" ng-show="success === false">
+        <path d="m35,15l-9.3,-9.3"/>
+        <path d="m35,15l9.3,9.3"/>
+        <path d="m35,15l-9.3,9.3"/>
+        <path d="m35,15l9.3,-9.3"/>
+    </svg>
+</div>
+
+
